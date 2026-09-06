@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { MagneticButton } from '@/components/ui/magnetic-button';
 
 // ============================================================================
 // Aceternity UI: Background Ripple Effect Component (Canvas-driven)
@@ -423,12 +424,14 @@ export default function App() {
                 Docs
               </a>
               {/* Shiny Primary White Button */}
-              <a
-                href="/scan"
-                className="text-sm font-semibold px-4 py-2 rounded-xl bg-white text-black hover:bg-white/90 shadow-[0_0_25px_rgba(255,255,255,0.4)] hover:shadow-[0_0_35px_rgba(255,255,255,0.6)] transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
-              >
-                Start a Scan
-              </a>
+              <MagneticButton>
+                <a
+                  href="/scan"
+                  className="text-sm font-semibold px-4 py-2 rounded-xl bg-white text-black hover:bg-white/90 shadow-[0_0_25px_rgba(255,255,255,0.4)] hover:shadow-[0_0_35px_rgba(255,255,255,0.6)] transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black inline-block"
+                >
+                  Start a Scan
+                </a>
+              </MagneticButton>
             </nav>
           </div>
         </header>
@@ -456,18 +459,22 @@ export default function App() {
 
                 {/* White Button Actions */}
                 <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-                  <a
-                    href="/scan"
-                    className="w-full sm:w-auto text-center px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-sm hover:bg-white/90 shadow-[0_0_30px_rgba(255,255,255,0.35)] hover:shadow-[0_0_40px_rgba(255,255,255,0.55)] transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
-                  >
-                    Start a Scan
-                  </a>
-                  <a
-                    href="/dashboard"
-                    className="w-full sm:w-auto text-center px-6 py-3.5 rounded-xl border border-white/20 bg-black/60 hover:bg-white/10 text-white font-medium text-sm backdrop-blur-md shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-black"
-                  >
-                    See a sample report
-                  </a>
+                  <MagneticButton>
+                    <a
+                      href="/scan"
+                      className="w-full sm:w-auto text-center px-6 py-3.5 rounded-xl bg-white text-black font-semibold text-sm hover:bg-white/90 shadow-[0_0_30px_rgba(255,255,255,0.35)] hover:shadow-[0_0_40px_rgba(255,255,255,0.55)] transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black inline-block"
+                    >
+                      Start a Scan
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="/dashboard"
+                      className="w-full sm:w-auto text-center px-6 py-3.5 rounded-xl border border-white/20 bg-black/60 hover:bg-white/10 text-white font-medium text-sm backdrop-blur-md shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/40 focus:ring-offset-2 focus:ring-offset-black inline-block"
+                    >
+                      See a sample report
+                    </a>
+                  </MagneticButton>
                 </div>
 
                 {/* Supported Parsers */}
