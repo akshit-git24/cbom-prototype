@@ -503,8 +503,6 @@ export default function App() {
                   <span className="text-white bg-white/5 px-2.5 py-1 rounded-md border border-white/10 backdrop-blur-md">Python</span>
                   <span className="text-white bg-white/5 px-2.5 py-1 rounded-md border border-white/10 backdrop-blur-md">C / C++</span>
                   <span className="text-white bg-white/5 px-2.5 py-1 rounded-md border border-white/10 backdrop-blur-md">Java</span>
-                  <span className="text-white bg-white/5 px-2.5 py-1 rounded-md border border-white/10 backdrop-blur-md">Go</span>
-                  <span className="text-white bg-white/5 px-2.5 py-1 rounded-md border border-white/10 backdrop-blur-md">ELF / PE Binaries</span>
                 </div>
               </div>
 
