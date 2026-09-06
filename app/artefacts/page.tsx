@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import AppNav from '@/app/components/navbar';
 
 // ============================================================================
 // Embedded Self-Contained UI Components (Guarantees zero-dependency compilation)
@@ -518,8 +519,10 @@ export default function ArtefactsPage() {
   };
 
   return (
-    <Background className="py-8 md:py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-8">
+    <>
+      <AppNav />
+      <Background>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12 flex flex-col gap-8">
         
         {/* 1. HEADER */}
         <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
@@ -845,6 +848,7 @@ export default function ArtefactsPage() {
         </footer>
 
       </div>
+      </Background>
 
       {/* 4. DETAIL DRAWER (SLIDE-OVER OVERLAY) */}
       {selectedArtefact && (
@@ -1007,6 +1011,6 @@ export default function ArtefactsPage() {
           </div>
         </div>
       )}
-    </Background>
+    </>
   );
 }

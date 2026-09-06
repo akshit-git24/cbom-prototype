@@ -423,6 +423,26 @@ export default function App() {
               >
                 Docs
               </a>
+
+              {/* Inner pages nav */}
+              <div className="hidden md:flex items-center gap-1 border-l border-white/10 pl-6">
+                {[
+                  { label: 'Dashboard', href: '/dashboard' },
+                  { label: 'Scan',      href: '/scan'      },
+                  { label: 'Artefacts', href: '/artefacts' },
+                  { label: 'Risk Graph',href: '/risk-graph'},
+                  { label: 'Reports',   href: '/reports'   },
+                ].map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm text-white/50 hover:text-white transition-colors font-medium px-3 py-1.5 rounded-lg hover:bg-white/5"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+
               {/* Shiny Primary White Button */}
               <MagneticButton>
                 <a

@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import AppNav from '@/app/components/navbar';
 
 interface UploadedFile {
   id: string;
@@ -180,18 +181,14 @@ export default function StartScanPage() {
       <div className="fixed top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-white/[0.03] rounded-full blur-[140px] pointer-events-none z-0" />
       <div className="fixed bottom-1/3 left-1/4 w-[400px] h-[250px] bg-white/[0.02] rounded-full blur-[120px] pointer-events-none z-0" />
 
+      {/* Navbar */}
+      <AppNav />
+
       {/* Content layer */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-16 flex flex-col gap-8">
 
         {/* HEADER */}
         <header className="flex flex-col items-start gap-3">
-          <Link
-            href="/"
-            className="text-xs font-mono text-white/50 hover:text-white transition-colors flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-white/40 rounded px-1 -ml-1"
-          >
-            ← Back to overview
-          </Link>
-
           <h1
             className="text-3xl sm:text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}

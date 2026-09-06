@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import AppNav from '@/app/components/navbar';
 
 // ============================================================================
 // Self-Contained UI Primitives (Guarantees zero-dependency compilation)
@@ -283,8 +284,10 @@ export default function ReportsPage() {
   };
 
   return (
-    <Background className="py-8 md:py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-10">
+    <>
+      <AppNav />
+      <Background>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12 flex flex-col gap-10">
         
         {/* 1. HEADER */}
         <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
@@ -488,6 +491,7 @@ export default function ReportsPage() {
         </footer>
 
       </div>
-    </Background>
+      </Background>
+    </>
   );
 }
